@@ -18,3 +18,9 @@ export function validUsername(str) {
   const valid_map = ['admin', 'editor']
   return valid_map.indexOf(str.trim()) >= 0
 }
+
+
+export function validMobile (mobile) {
+  var reg=/^(?:(?:\+|00)86)?1\d{10}$/
+  return reg.test(mobile)
+}
