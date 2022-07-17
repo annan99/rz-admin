@@ -24,6 +24,8 @@ export default {
   width: 100%;
   position: relative;
   overflow: hidden;
+  /* background: url('~@/assets/common/login-laopo.png');
+  background-position: cover; */
 }
 .fixed-header+.app-main {
   padding-top: 50px;

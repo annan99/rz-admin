@@ -13,3 +13,14 @@ export function setToken(token) {
 export function removeToken() {
   return Cookies.remove(TokenKey)
 }
+
+const TimeKey = 'heima_time_key'
+
+// 存时间戳
+export function setTime(time){
+  return Cookies.set(TimeKey,time)
+}
+// 获取时间戳
+export function getTime() {
+  return Cookies.get(TimeKey)
+}
