@@ -32,9 +32,9 @@ import '@/permission' // permission control  权限控制
 // }
 
 // set ElementUI lang to EN
-Vue.use(ElementUI, { locale })
+// Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明
-// Vue.use(ElementUI)
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
@@ -45,6 +45,20 @@ import * as obj from '@/directives'
 Object.keys(obj).forEach(item=>{
   Vue.directive(item,obj[item])
 })
+
+//什么时候用插件？ 我们封装一堆公共组件给同事使用的时候，为了使用方便
+import components from './components'
+// 自动执行install方法
+Vue.use(components)
+
+// 封装过滤器，修改时间
+import * as filters from '@/filters'
+Object.keys(filters).forEach(item=>{
+  Vue.filter(item,filters[item])
+})
+
+
+
 
 new Vue({
   el: '#app',

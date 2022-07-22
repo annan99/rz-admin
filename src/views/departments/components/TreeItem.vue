@@ -102,20 +102,20 @@ export default {
       rules:{
         name:[
           {required:true,message:'部门名称不能为空',trigger:'blur'},
-          {min:3,max:10,message:'长度在3-10之间',trigger:'biur'},
+          {min:3,max:10,message:'长度在3-10之间',trigger:'blur'},
           {validator:validateName,trigger:'change'}
         ],
         code:[
            {required:true,message:'部门编码不能为空',trigger:'blur'},
-          {min:3,max:10,message:'长度在3-10之间',trigger:'biur'}
+          {min:3,max:10,message:'长度在3-10之间',trigger:'blur'}
         ],
         manager:[
            {required:true,message:'部门负责人不能为空',trigger:'blur'},
-          {min:3,max:10,message:'长度在3-10之间',trigger:'biur'}
+          {min:3,max:10,message:'长度在3-10之间',trigger:'blur'}
         ],
         introduce:[
            {required:true,message:'部门介绍不能为空',trigger:'blur'},
-          {min:3,max:100,message:'长度在3-100之间',trigger:'biur'}
+          {min:3,max:100,message:'长度在3-100之间',trigger:'blur'}
         ]
       },
       users:[], //简单用户列表
