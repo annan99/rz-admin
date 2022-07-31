@@ -1,6 +1,8 @@
 <template>
-  <div class="user-info">
+  <div class="user-info" style="position:relative">
+    <i class="el-icon-printer" v-print="'#printMe'" style="position:absolute;right:0;top:0;z-index:2"></i>
     <!-- 个人信息 -->
+    <div id="printMe">
     <el-form label-width="220px">
       <!-- 工号 入职时间 -->
       <el-row class="inline-info">
@@ -58,7 +60,7 @@
         <el-col :span="12">
           <el-form-item label="员工头像">
             <!-- 放置上传图片 -->
-           
+           <UploadImage></UploadImage>
           </el-form-item>
         </el-col>
       </el-row>
@@ -90,6 +92,7 @@
 
         <el-form-item label="员工照片">
           <!-- 放置上传图片 -->
+          <UploadImage :limit="5"></UploadImage>
         </el-form-item>
         <el-form-item label="国家/地区">
           <el-select v-model="formData.nationalArea" class="inputW2">
@@ -277,7 +280,7 @@
         </el-row>
       </div>
     </el-form>
-
+    </div>
   </div>
 
 </template>
